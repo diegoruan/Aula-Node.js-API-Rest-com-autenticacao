@@ -66,7 +66,7 @@ class UsuarioService {
     }
 
     async deletarUsuario(id) {
-        const usuario = await this.buscarUsuarioPorId(id)
+        await this.buscarUsuarioPorId(id)
 
         try {
             await database.usuarios.destroy({
